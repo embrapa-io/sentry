@@ -47,7 +47,12 @@ Configuração e recuparação da instância do **Sentry** (_error tracking_) no
    ./install.sh
    ```
 
-5. Após finalizar a instalação, faça:
+5. Configurações:
+
+   - Alterar no arquivo `sentry/sentry.conf.py` a variável `SENTRY_SINGLE_ORGANIZATION = False`.
+   - Ajustar as configurações de **SMTP** em `sentry/config.yaml`.
+
+6. Após finalizar a instalação, faça:
 
    ```bash
    docker compose up --wait
