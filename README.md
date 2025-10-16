@@ -16,14 +16,14 @@ Configuração e recuparação da instância do **Sentry** (_error tracking_) no
 
 2. Siga o passo-a-passo da [documentação oficial](https://develop.sentry.dev/self-hosted/) e instale a última versão do Sentry:
 
-  ```bash
-  VERSION=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/getsentry/self-hosted/releases/latest) && \
-  VERSION=${VERSION##*/} && \
-  git clone https://github.com/getsentry/self-hosted.git sentry && \
-  cd sentry && \
-  git checkout ${VERSION} && \
-  ./install.sh
-  ```
+   ```bash
+   VERSION=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/getsentry/self-hosted/releases/latest) && \
+   VERSION=${VERSION##*/} && \
+   git clone https://github.com/getsentry/self-hosted.git sentry && \
+   cd sentry && \
+   git checkout ${VERSION} && \
+   ./install.sh
+   ```
 
 3. Após finalizar a instalação, faça:
 
