@@ -16,7 +16,7 @@ Configuração e recuparação da instância do **Sentry** (_error tracking_) no
 
 2. Instale a última versão do Docker, seguindo a [documentação oficial](https://docs.docker.com/engine/install/ubuntu/):
 
-   Configure o repositório oficial:
+   - Configure o repositório oficial
 
    ```bash
    for pkg in docker.io docker-doc docker-compose docker-compose-v2 podman-docker containerd runc; do sudo apt-get remove $pkg; done && \
@@ -30,7 +30,7 @@ Configuração e recuparação da instância do **Sentry** (_error tracking_) no
    apt update
    ```
 
-   Instale a última versão do Docker:
+   - Instale a última versão do Docker:
 
    ```bash
    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
