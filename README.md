@@ -11,6 +11,7 @@ Configuração e recuparação da instância do **Sentry** (_error tracking_) no
    ```bash
    sudo su -
    apt update && apt upgrade -y && apt dist-upgrade -y && apt autoremove -y && apt autoclean
+   apt install openssh-server vim
    ```
 
 2. Siga o passo-a-passo da [documentação oficial](https://develop.sentry.dev/self-hosted/) e instale a última versão do Sentry:
