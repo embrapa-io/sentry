@@ -50,9 +50,22 @@ Configuração e recuparação da instância do **Sentry** (_error tracking_) no
 5. Configurações:
 
    - Alterar no arquivo `sentry/sentry.conf.py` a variável `SENTRY_SINGLE_ORGANIZATION = False`.
-   - Ajustar as configurações de **SMTP** em `sentry/config.yaml`.
-
-6. Após finalizar a instalação, faça:
+   - Ajustar as configurações de **SMTP** em `sentry/config.yaml` e também:
+   
+   ```yaml
+   # Para não dar erro de CSRF
+   system.url-prefix: https://nginx.sentry.orb.local
+   ```
+   
+   - Ajuste no `.env` na raiz da aplicação:
+  
+   ```ini
+   COMPOSE_PROJECT_NAME=sentry
+   # Se estiver em ambiente de desenvolvimento:
+   SENTRY_MAIL_HOST=host.docker.internal
+   ```
+   
+7. Após finalizar a instalação, faça:
 
    ```bash
    docker compose up --wait
