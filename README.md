@@ -53,7 +53,8 @@ Configuração e recuparação da instância do **Sentry** (_error tracking_) no
    - Ajustar as configurações de **SMTP** em `sentry/config.yaml` e também:
    
    ```yaml
-   # Para não dar erro de CSRF
+   # Para não dar erro de CSRF:
+   # https://github.com/getsentry/self-hosted/issues/2751
    system.url-prefix: https://nginx.sentry.orb.local
    ```
    
