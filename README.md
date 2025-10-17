@@ -47,7 +47,7 @@ Configuração e recuparação da instância do **Sentry** (_error tracking_) no
    ./install.sh
    ```
 
-   > **Atenção!** Se estiver utilizando arquitetura `arm64` (p.e., processadores Apple Silicon) o _checkout_ da _tag_ precisa ter o sufixo `-arm64` (p.e., `git checkout 25.6.0-arm64`).
+   <!-- > **Atenção!** Se estiver utilizando arquitetura `arm64` (p.e., processadores Apple Silicon) o _checkout_ da _tag_ precisa ter o sufixo `-arm64` (p.e., `git checkout 25.6.0-arm64`). -->
 
 5. Configurações:
 
