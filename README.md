@@ -1,10 +1,10 @@
 # Sentry for Embrapa I/O
 
-Configuração e recuparação da instância do **Sentry** (_error tracking_) no ecossistema do **Embrapa I/O**.
+Configuração e recuparação da instância do [**Sentry**](https://sentry.io) (_error tracking_) no ecossistema do **Embrapa I/O**.
 
-<!-- Observação: Em ambiantes **Apple Silicon** será necessário utilizar o UTM com QEMU (emulando a arquitetura AMD64). Nestes casos, habilite 4 CPUs, pelo menos 8GB de RAM e configure a VM para utilizar o processador "`Intel Core Processor (Haswell) (Haswell-v1)`" e habilite os seguintes recursos: `sse4.2`, `sse4.1`, `avx`, `avx2` e `ssse3`. -->
+## Instalação
 
-## Ambiente de Desenvolvimento
+> **Atenção!** Em **ambiente de desenvolvimento** instale o **Sentry** diretamente no Docker do seu sistema operacional (não necessariamente em uma VM). Esta dica é válida principalmente para quem utiliza **Apple Silicon**. Em outras palavras, neste caso avance para o "**Passo 3**".
 
 1. Crie uma VM local em **Ubuntu Server 24.04 LTS**:
    
@@ -36,7 +36,7 @@ Configuração e recuparação da instância do **Sentry** (_error tracking_) no
    sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
    ```
 
-4. Siga o passo-a-passo da [documentação oficial](https://develop.sentry.dev/self-hosted/) e instale a última versão do Sentry:
+3. Siga o passo-a-passo da [documentação oficial](https://develop.sentry.dev/self-hosted/) e instale a última versão do Sentry:
 
    ```bash
    VERSION=$(curl -Ls -o /dev/null -w %{url_effective} https://github.com/getsentry/self-hosted/releases/latest) && \
@@ -47,7 +47,7 @@ Configuração e recuparação da instância do **Sentry** (_error tracking_) no
    ./install.sh
    ```
 
-5. Configurações:
+4. Configurações:
 
    - Alterar no arquivo `sentry/sentry.conf.py` a variável `SENTRY_SINGLE_ORGANIZATION = False`.
    - Ajustar as configurações de **SMTP** em `sentry/config.yaml` e também:
