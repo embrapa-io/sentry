@@ -71,3 +71,18 @@ Configuração e recuparação da instância do [**Sentry**](https://sentry.io) 
    ```bash
    docker compose up --wait
    ```
+
+## Atualização
+
+Verifique se foi lançada uma [nova versão](https://github.com/getsentry/self-hosted/tags). Neste caso, acesse o diretório clonado e faça:
+
+```bash
+git fetch --all
+
+# Altere abaixo para a versão correta:
+git checkout 25.10.0
+
+./install.sh
+
+docker compose up --wait
+```
